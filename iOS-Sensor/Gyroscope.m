@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%       Gyroscope      %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+clear all
 
 % Checks if mobile is facing up or down
 
@@ -11,7 +11,7 @@
 % Application properties
 port       = 31415;       % Standard port(31415)
 password   = 'password';  % Password for iOS app
-numOfLoops = 150;         % Number of datapoints 
+numOfLoops = 50;         % Number of datapoints 
 
 
 % Sensor properties:
@@ -25,10 +25,9 @@ sampleRate         = 'Low';  %high, medium, low
 
 
 %%%%% Script starting here. %%%%%%%%%%%%%%%%%%%%%%%%%
-clear m;
-
 connector on
 m = mobiledev;
+
 
 m.AccelerationSensorEnabled     = accelerationSensor;
 m.AngularVelocitySensorEnabled	= angularVelocity;
@@ -57,24 +56,28 @@ for k = 1:numOfLoops
     
     if ~isempty(o)         %~ not operator 
         
-        % Compute mean value of the 3 column, roll/z axis.
+        % Compute mean value of the third column, roll/z-axis.
         z = mean(o(:,3));  % in degrees 
         
         % Check Z-axis to determine which way phone is facing
-        if (z > 75 && z < 95)
-            disp('R Side')
-        elseif (z < -75 && z > - 95)
-            disp('L Side')
+        if (z > 70 && z < 98)
+            disp('Right Side:')
+            disp(z)
+        elseif (z < -70 && z > - 98)
+            disp('Left Side:')
+            disp(z)
         elseif z > -100 && z < 100
-            disp('Up')
+            disp('Facing Up:')
+            disp(z)
         else
-            disp('Down')
+            disp('Facing Down:')
+            disp(z)
+          
         end   
      end
  end
 
 
 % Clean up
-connector off
 clear m
 
