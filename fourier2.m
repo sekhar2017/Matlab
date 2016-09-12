@@ -17,7 +17,7 @@ f_periodic = PeriodicFunction(f, Interval);
 % Number of coefficients to calculate. N should be less than half the
 % number of samples: 2*N < samples
 N = 100;
-samples =;
+samples = 200;
 
 % Calculating the coefficients with trapezoid-method.
 x = linspace(-L, L, samples);
