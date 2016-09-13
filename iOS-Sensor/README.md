@@ -9,6 +9,5 @@ Latitude, longitude, altitude, horizontal accuracy, speed, and course<br/><br/>
 
 <img src="http://se.mathworks.com/cmsimages/77689_wm_mobile-thumb.jpg"></img> <br/><br/>
 
-<b>Graph of step counter script</b>
-<img src="./StepCount.png"></img>
+
 
