@@ -38,12 +38,14 @@ m.Logging = 1;
 % Log data, 15 seconds
 disp('Walk Around...')
 pause(15)
+disp('Plotting')
+
 
 % Disable sensor
 m.AccelerationSensorEnabled = 0;
 m.Logging = 0;
 
-
+% 
 [logdata, timestamp] = accellog(m);
 
 % Change vectors to scalars
@@ -51,6 +53,7 @@ m.Logging = 0;
 x = logdata(:,1);
 y = logdata(:,2);
 z = logdata(:,3);
+
 
 % Fucntion of three variables
 magnitude = sqrt(sum(x.*x + y.*y + z.*z, 2));
