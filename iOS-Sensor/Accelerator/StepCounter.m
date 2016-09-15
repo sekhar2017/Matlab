@@ -55,17 +55,15 @@ y = logdata(:,2);
 z = logdata(:,3);
 
 
-% Fucntion of three variables
+% Magnitude of speed
 magnitude = sqrt(sum(x.*x + y.*y + z.*z, 2));
 
 
 % Subtracting the mean removes constants like gravity.
 magnitudeNoG = magnitude - mean(magnitude);
-
-
 plot(timestamp, magnitudeNoG);
 
-% Standard deviation
+% Standard deviation (statistics)
 minPeakHeight = std(magnitudeNoG);
 
 % Use findpeaks from signal processing toolbox
