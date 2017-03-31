@@ -1,2 +1,2 @@
-<h1> Matlab code </h1>
-<p> Fourier </p>
+### Some matlab scripts from a mathematical course 
+With many thanks to Oddmar Eiksund!
