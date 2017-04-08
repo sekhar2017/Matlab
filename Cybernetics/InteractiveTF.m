@@ -2,9 +2,15 @@
 
 w_0 = 2; % Natural Frequency (Omega_n)
 z = 0.5; % Damping Ratio (zeta)
+K = 1;   % 
 
 % Standard second order oscillatory differential equation
-sys = tf(w_0^2,[1,2*z*w_0,w_0^2]);
+sys = tf(K,[(1/w_0)^2 2*z/w_0 1]); 
+%            K
+% -----------------------
+%      2*zeta*s     s^2
+% 1 +  --------  + -----
+%       W_o        W_o^2
 
 f = figure;
 ax = axes('Parent',f,'position',[0.13 0.39  0.77 0.54]);
