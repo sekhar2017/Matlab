@@ -87,9 +87,11 @@ subplot(221),plot(t,z,'g',t,x_hat(:,1),'r')
 xlabel('time (s)'),title('Position x_1'),grid
 legend('z=x_1','x_1hat', 'location', 'best')
 
-subplot(222),plot(t,x(:,2),'g',t,x_hat(:,2),'r')
+subplot(222),
+plot(t,x(:,2),'g',t,x_hat(:,2),'r')
 xlabel('time (s)'),title('Velocity x_2'),grid
 legend('x_2','x_2hat', 'location', 'best')
+% xlim([0 200]), ylim([-.6 .6])
 
 subplot(223),plot(t,eps),xlabel('time (s)'),title('Estimation error: z - zhat'),grid
 subplot(224),plot(t,X_hat),xlabel('time (s)'),title('Diagonal of covariance matrix X'),grid
