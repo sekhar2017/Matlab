@@ -7,8 +7,8 @@ s = tf('s');
 t = 0:pi/100:2*pi;
 
 % Sinuser
-v1 = 5*sin(2*pi*0.2*t);
-v2 = 5*sin(2*pi*1.0*t);
+v1 = 5 * sin(2*pi*0.2*t);
+v2 = 5 * sin(2*pi*1.0*t);
 
 % Krets A)             
 A_h = 1/(R1*C1*s + 1);  

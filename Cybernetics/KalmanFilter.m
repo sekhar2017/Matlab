@@ -62,7 +62,6 @@ title(['Falling object k/m = ' num2str(k/m)]);
 legend('x','v'); 
 
 function s = kalmanf(s)
-
 % State vector
 s.x = s.A*s.x + s.B*s.u;
 s.P = s.A * s.P * s.A' + s.Q;

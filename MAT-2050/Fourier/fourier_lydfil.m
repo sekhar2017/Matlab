@@ -4,15 +4,15 @@
 clear
 close all
 
-[yA,Fs] = audioread('vokalar/a.wav');
-yE      = audioread('vokalar/e.wav');
-yI      = audioread('vokalar/i.wav');
-yO      = audioread('vokalar/o.wav');
-yU      = audioread('vokalar/u.wav');
-yY      = audioread('vokalar/y.wav');
-yAE     = audioread('vokalar/æ.wav');
-yOE     = audioread('vokalar/ø.wav');
-yAA     = audioread('vokalar/å.wav');
+[yA,Fs] = audioread('docs/vokalar/a.wav');
+yE      = audioread('docs/vokalar/e.wav');
+yI      = audioread('docs/vokalar/i.wav');
+yO      = audioread('docs/vokalar/o.wav');
+yU      = audioread('docs/vokalar/u.wav');
+yY      = audioread('docs/vokalar/y.wav');
+yAE     = audioread('docs/vokalar/Ã¦.wav');
+yOE     = audioread('docs/vokalar/Ã¸.wav');
+yAA     = audioread('docs/vokalar/Ã¥.wav');
 
 %% 
 
@@ -27,7 +27,7 @@ soundsc(yy,Fs)
 f0 = 220;             % Grunnfrekvensen i Hz
 m  = round(Fs/f0);    % Antall samplingar i ei periode
 
-L = 1/(2*f0);         % Reknar ut L målt i sekund
+L = 1/(2*f0);         % Reknar ut L 
 t = linspace(-L,L,m); % Tidsrommet
 N = 20;               % Antall ledd i fourier-rekka
 
@@ -52,7 +52,7 @@ end
 
 %%
 
-% Vi vil no bruke dei utrekna koeffisientane til å generere eit lydsignal lyd.
+% Vi vil no bruke dei utrekna koeffisientane til ï¿½ generere eit lydsignal lyd.
 T = 0:1/Fs:1;
 Y = 0*T + a0;
 for n = 1:N

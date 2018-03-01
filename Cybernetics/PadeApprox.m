@@ -1,4 +1,4 @@
-%% Padé approximation of a transfer function with delay
+%% Pade approximation of a transfer function with delay
 close, clear, clc
 
 K = 1.8;

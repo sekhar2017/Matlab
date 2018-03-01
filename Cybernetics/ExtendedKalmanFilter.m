@@ -1,5 +1,4 @@
 % Nonlinear Discrete-Time Kalman filter
-% Courtesy of Thor I. Fossen
 
 %% USER INPUT
 h = 0.1; 		% sampling time (s)
@@ -72,7 +71,6 @@ for i=1:N+1
 end
 
 %% PLOTS
-
 t     = simdata(:,1); 
 x     = simdata(:,2:3); 
 x_hat = simdata(:,4:5); 

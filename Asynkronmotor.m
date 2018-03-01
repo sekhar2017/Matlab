@@ -31,24 +31,21 @@ Rleq = real(Zleq);
 Xleq = imag(Zleq) ; 
 Vleq = abs(Vt*j*Xm/(R1+ j*(X1+Xm))); 
 
-%Here is the loop over rotor resistance 
-
-
-%Loop for sakking
-
-for n = 1:200 
-s(n) = n/200; % slip 
-snn = 1-s(n);
-rpm(n) = ns*snn; %rpm 
-I2 = abs(Vleq/(Zleq + j*X2 + R2/s(n))) ; %I2 
-Tmech(n) = Np*I2^2*R2/(s(n)*omegas); %Elektromekanisk moment 
-
-end %End sakking
+% Regn ut sakking
+for n = 1:200;
+    % slip
+    s(n) = n / 200;  
+    snn = 1-s(n);
+    
+    % rpm
+    rpm(n) = ns*snn; %rpm 
+    I2 = abs(Vleq/(Zleq + j*X2 + R2/s(n))) ; 
+    Tmech(n) = Np*I2^2*R2/(s(n)*omegas); % Elektromekanisk moment 
+end 
 
 % Plot
 plot (rpm, Tmech) 
 grid on
 hold on
-%End resistans loop
 xlabel ('RPM') 
 ylabel ('MOMENT')

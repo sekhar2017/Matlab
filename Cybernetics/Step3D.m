@@ -14,7 +14,7 @@ end
 tf(num,den)
 
 mesh(y)
-title('3D Plot Unit-Step Response')
+title('3D plott av togskinne vektorer')
 xlabel('n, where n = 1,2,3,4,5,6')
 ylabel('Computation Time Points')
 zlabel('Outputs')

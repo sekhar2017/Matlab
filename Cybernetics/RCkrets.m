@@ -1,4 +1,4 @@
-% Øving 2 - Regtek
+% Ã˜ving 2 - Regtek
 R2 =  10e3; % k[ohm]
 R1 = 100e3; % k[ohm]
 C1 = 30e-6; % mic[F]
